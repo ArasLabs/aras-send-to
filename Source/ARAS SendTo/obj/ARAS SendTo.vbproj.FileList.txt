@@ -1,0 +1,13 @@
+bin\Debug\ARAS SendTo.exe
+bin\Debug\ARAS SendTo.pdb
+bin\Debug\ARAS SendTo.xml
+bin\Debug\IOM.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ARAS_SendTo.Form1.resources
+obj\Debug\ARAS_SendTo.Resources.resources
+obj\Debug\ARAS SendTo.vbproj.GenerateResource.Cache
+obj\Debug\ARAS SendTo.exe
+obj\Debug\ARAS SendTo.xml
+obj\Debug\ARAS SendTo.pdb
+obj\Debug\ARAS_SendTo.Form2.resources
+obj\Debug\ARAS_SendTo.Dialog1.resources

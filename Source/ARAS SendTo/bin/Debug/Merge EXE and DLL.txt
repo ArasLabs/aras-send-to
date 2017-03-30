@@ -1,0 +1,6 @@
+eine EXE kann mehr parameter empfangen als eine Verknüpfung
+Deshalb sollte die EXE in das SendTo Verzeichnis anstelle der Verknüfpung
+
+damit die IOM.dd nicht auch in Sendto muss, mit ILMerge die exe und die dll mergen. dann kann nur die gemergde exe ins sendto kopiert werden und die installation is done
+
+ilmerge/out=merge.exe "exefile.exe" "dllfile.dll"
