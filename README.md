@@ -1,0 +1,47 @@
+# Aras SendTo
+
+Lets user check-in Files to Innovator directly from the Windows Explorer Context menu "Send To".
+
+Simply select one or many files in Windows Explorer and right click "Send to Aras Innovator".
+
+## History
+
+This project and the following release notes have been migrated from the old Aras Projects page. Unlike community projects that have been migrated and archived, this project will be updated for compatibility with the latest release of Aras Innovator.
+
+Release | Notes
+--------|--------
+[v8.1](https://github.com/ArasLabs/aras-send-to/releases/tag/v8.1) | Quick Start, MSI Installer for Aras Send to, and Visual Studio Project (VB Source Code).
+
+#### Supported Aras Versions
+
+Project | Aras
+--------|------
+[v8.1](https://github.com/ArasLabs/aras-send-to/releases/tag/v8.1) | 8.1
+
+## Installation
+
+Download the MSI Installer and run the .msi. This will install just one single file in your SendTo Folder, nothing else.
+
+Open Windows Explorer, right click on a file and click on SendTo - Aras Innovator. You dont need to download the Visual Studio Project if you dont want to make modifications in the code.
+
+## Usage
+
+![Screenshot of Aras SendTo](./Screenshots/SendTo.JPG)
+
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+
+For more information on contributing to this project, another Aras Labs project, or any Aras Community project, shoot us an email at araslabs@aras.com.
+
+## Credits
+
+Created by Martin Allemann.
+
+## License
+
+Aras Labs projects are published to Github under the MIT license. See the [LICENSE file](./LICENSE.md) for license rights and limitations.
