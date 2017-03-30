@@ -1,3 +1,5 @@
+Imports System.Xml
+
 Public Class Form1
 
 #Region "Public definitions"
@@ -39,7 +41,7 @@ Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-   
+
         ' prepare the checkin process after the user started the program
 
         ' set gui
@@ -108,7 +110,7 @@ Public Class Form1
         '' manual file pointer for debuging
         'argC = 3
         'ReDim CheckInFile(1)
-        'CheckInFile(1) = "C:\Users\anwender\Documents\Allemann Aktuell\Test.txt"
+        'CheckInFile(1) = "C:\Test.txt"
 
 
         ' if no second parameter received, we can not proceed (this happens
@@ -240,7 +242,7 @@ Public Class Form1
                 butOK.Visible = False
                 butCancel.Visible = False
                 ' Delete Local Files after check-in
-                If cbDeleteLocalFiles.checked = True Then
+                If cbDeleteLocalFiles.Checked = True Then
                     For I = 1 To CheckInFile.Length - 1
                         IO.File.Delete(CheckInFile(I))
                     Next
@@ -346,93 +348,50 @@ Public Class Form1
         Dim MyResult1 As Aras.IOM.Item = MyDocClass.apply()
         ClassStructure = MyResult1.getItemByIndex(0).getProperty("class_structure", "nothing")
 
-        ' if the class_structure exists, analyse it and build the tree view control
-        If ClassStructure <> "nothing" Then
-            Dim CS As String = ClassStructure
-            Dim tn As New TreeNode
-            Dim NextIsSub As Boolean = False
-            Dim OneUp As Boolean = False
-            Dim LastNode As New TreeNode
+        ' Convert ClassStructure String in XMLDocument ClassStructureXML
+        Dim ClassStructureXML As New XmlDocument
+        ClassStructureXML.LoadXml(ClassStructure)
 
-            ' Loop trough all Tags of the XML file
-            ' read all Elements in <...>, analyse them and fill tre tree
-            Do
-                ' Read the first Tag in the XML-String
-                Dim Tag As String
-                Dim TagName As String
-                Dim I1, I2 As Integer
-                I1 = CS.IndexOf("<")
-                I2 = CS.IndexOf(">", 1)
-                Tag = CS.Substring(I1, I2 - I1 + 1)
+        ' Populate Treeview from ClassStructureXML
+        tvClass.Nodes.Clear()
+        tvClass.Nodes.Add(New TreeNode(ClassStructureXML.DocumentElement.Name))
+        Dim tNode As New TreeNode()
+        tNode = tvClass.Nodes(0)
+        ' Populate the TreeView with the DOM nodes.
+        AddNode(ClassStructureXML.DocumentElement, tNode)
+        tvClass.ExpandAll()
 
-                'remove the TAG we just read from the string. in the next loop
-                ' we will get the next TAG as the first TAG in the String
-                CS = CS.Substring(I2 - I1 + 1)
-
-                ' Read Tag Name from The TAG by removing all other characters
-                Try
-                    TagName = Tag.Substring(Tag.IndexOf(Chr(34)) + 1)
-                    TagName = TagName.Substring(0, TagName.IndexOf(Chr(34)))
-                Catch ex As Exception
-                    TagName = Tag
-                End Try
-
-                ' if no node exists in the tree so far, create first node
-                If tvClass.Nodes.Count = 0 Then
-                    ' first node
-                    tn = New TreeNode
-                    tn.Name = Tag
-                    tn.Text = TagName
-                    tvClass.Nodes.Add(tn)
-                    LastNode = tn
-                Else
-                    ' build second to many node in the tree
-                    If Tag = "</class>" Then ' move one level up in treeview, no node to add
-                        Dim pn As New TreeNode
-                        pn = LastNode.Parent
-                        LastNode = New TreeNode
-                        LastNode = pn
-                    Else
-                        ' add new node as sister, son or sister of the last parant
-                        If NextIsSub = True Then ' subnode of last
-                            tn = New TreeNode
-                            tn.Name = Tag
-                            tn.Text = TagName
-                            LastNode.Nodes.Add(tn)
-                            LastNode = tn
-                        End If
-                        If NextIsSub = False Then ' sisternode of last node
-                            tn = New TreeNode
-                            tn.Name = Tag
-                            tn.Text = TagName
-                            Dim SisterNode As New TreeNode
-                            SisterNode = LastNode.Parent
-                            SisterNode.Nodes.Add(tn)
-                            LastNode = tn
-                        End If
-                    End If
-                End If
-
-
-                ' decide depending on the end of the tag string
-                ' what type of tag the next one will be
-                If Tag.EndsWith("/>") Then
-                    NextIsSub = False           ' Next is Sister to last
-                Else
-                    NextIsSub = True            ' Next is Sub Element from last
-                End If
-                If Tag.EndsWith("/class>") Then
-                    OneUp = True                ' Class end, next is sister to last's parent
-                    NextIsSub = False
-                Else
-                    OneUp = False               ' Next is in any case on the same level or deeper
-                End If
-            Loop Until CS.Length < 1
-        End If
-
+        ' Expand Treeview and scroll to the top
         tvClass.Nodes(0).Expand()
-
+        tvClass.Nodes(0).EnsureVisible()
     End Sub
+
+    
+
+    Private Sub AddNode(ByRef inXmlNode As XmlNode, ByRef inTreeNode As TreeNode)
+        Dim xNode As XmlNode
+        Dim tNode As TreeNode
+        Dim nodeList As XmlNodeList
+        Dim i As Integer
+
+        ' Loop through the XML nodes until the leaf is reached.
+        ' Add the nodes to the TreeView during the looping process.
+        If inXmlNode.HasChildNodes() Then
+            nodeList = inXmlNode.ChildNodes
+            For i = 0 To nodeList.Count - 1
+                xNode = inXmlNode.ChildNodes(i)
+                'inTreeNode.Nodes.Add(New TreeNode(xNode.Name))
+                inTreeNode.Nodes.Add(New TreeNode(xNode.Attributes("name").Value))
+                tNode = inTreeNode.Nodes(i)
+                AddNode(xNode, tNode)
+            Next
+        Else
+            ' Here you need to pull the data from the XmlNode based on the
+            ' type of node, whether attribute values are required, and so forth.
+            inTreeNode.Text = (inXmlNode.Attributes("name").Value.ToString)
+        End If
+    End Sub
+
 #End Region
 
 #Region "Start Get Class Structure Process (Get Class Button Click)"
