@@ -32,10 +32,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IOM, Version=8.2.0.5413, Culture=neutral, PublicKeyToken=2c179e07b0395376">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files\Aras\Innovator\Innovator\Server\bin\IOM.dll</HintPath>
-    </Reference>
+    <Reference Include="IOM, Version=9.1.0.5501, Culture=neutral, PublicKeyToken=524d880b05474146, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />

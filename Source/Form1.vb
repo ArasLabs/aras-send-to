@@ -488,6 +488,7 @@ Public Class Form1
             txtClass.Text = P.Text & "/" & txtClass.Text
             CurrentNode = P
         Next
+        txtClass.Text = "/" & txtClass.Text
     End Sub
 #End Region
 

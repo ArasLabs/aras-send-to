@@ -1,0 +1,12 @@
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\obj\Debug\ARAS SendTo.exe
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\obj\Debug\ARAS SendTo.xml
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\obj\Debug\ARAS SendTo.pdb
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\bin\Debug\ARAS SendTo.exe
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\bin\Debug\ARAS SendTo.pdb
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\bin\Debug\ARAS SendTo.xml
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\obj\Debug\ARAS_SendTo.Dialog1.resources
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\obj\Debug\ARAS_SendTo.Form1.resources
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\obj\Debug\ARAS_SendTo.Form2.resources
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\obj\Debug\ARAS_SendTo.Resources.resources
+C:\Users\anwender\Documents\Visual Studio 2005\Projects\ARAS SendTo\ARAS SendTo\obj\Debug\ARAS SendTo.vbproj.GenerateResource.Cache
