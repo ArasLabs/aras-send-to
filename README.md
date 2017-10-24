@@ -6,7 +6,7 @@ Simply select one or many files in Windows Explorer and right click "Send to Ara
 
 ## History
 
-This project and the following release notes have been migrated from the old Aras Projects page. Unlike community projects that have been migrated and archived, this project will be updated for compatibility with the latest release of Aras Innovator.
+This project and the following release notes have been migrated from the old Aras Projects page.
 
 Release | Notes
 --------|--------
@@ -18,7 +18,7 @@ Release | Notes
 
 Project | Aras
 --------|------
-[v9.3](https://github.com/ArasLabs/aras-send-to/releases/tag/v9.3) | 9.3
+[v9.3](https://github.com/ArasLabs/aras-send-to/releases/tag/v9.3) | 9.3, 11.0 SP9
 [v9.1](https://github.com/ArasLabs/aras-send-to/releases/tag/v9.1) | 8.1, 9.1
 [v8.1](https://github.com/ArasLabs/aras-send-to/releases/tag/v8.1) | 8.1
 
@@ -45,6 +45,9 @@ For more information on contributing to this project, another Aras Labs project,
 ## Credits
 
 Created by Martin Allemann.
+
+Contributors:
+* @AngelaIp
 
 ## License
 
