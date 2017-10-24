@@ -46,6 +46,9 @@ For more information on contributing to this project, another Aras Labs project,
 
 Created by Martin Allemann.
 
+Contributors:
+* @AngelaIp
+
 ## License
 
 Aras Labs projects are published to Github under the MIT license. See the [LICENSE file](./LICENSE.md) for license rights and limitations.
