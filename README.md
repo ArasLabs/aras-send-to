@@ -2,7 +2,7 @@
 
 Lets user check-in Files to Innovator directly from the Windows Explorer Context menu "Send To".
 
-Simply select one or many files in Windows Explorer and right click "Send to Aras Innovator".
+Simply select one or many files in Windows Explorer and right-click "Send to Aras Innovator".
 
 ## History
 
@@ -10,7 +10,7 @@ This project and the following release notes have been migrated from the old Ara
 
 Release | Notes
 --------|--------
-[v9.3](https://github.com/ArasLabs/aras-send-to/releases/tag/v9.3) | Visual Studio Project (VB Source Code) for Aras Innovator 9.3. New MSI Install to Support Aras Innovator Version 9.3. Please remove old version before you install this version.
+[v9.3](https://github.com/ArasLabs/aras-send-to/releases/tag/v9.3) | Visual Studio Project (VB Source Code) for Aras Innovator 9.3. New MSI Install to Support Aras Innovator Version 9.3. Please remove the old version before you install this version.
 [v9.1](https://github.com/ArasLabs/aras-send-to/releases/tag/v9.1) | Visual Studio Project (VB Source Code) for Aras Innovator 9.1. One line of code added to fix a small problem around document classes. Works still with older Aras Innovator Version. New MSI Install to support Aras Innovator Version 9.1+. Installing this version will remove the old version of "Aras Send To" from your system. The Installation will still copy only one file to your "Send To" folder on your system.
 [v8.1](https://github.com/ArasLabs/aras-send-to/releases/tag/v8.1) | Quick Start, MSI Installer for Aras Send to, and Visual Studio Project (VB Source Code).
 
@@ -26,7 +26,7 @@ Project | Aras
 
 Download the MSI Installer and run the .msi. This will install just one single file in your SendTo Folder, nothing else.
 
-Open Windows Explorer, right click on a file and click on SendTo - Aras Innovator. You dont need to download the Visual Studio Project if you dont want to make modifications in the code.
+Open Windows Explorer, right click on a file and click on SendTo - Aras Innovator. You don't need to download the Visual Studio Project if you don't want to make modifications in the code.
 
 ## Usage
 
@@ -48,6 +48,7 @@ Created by Martin Allemann.
 
 Contributors:
 * @AngelaIp
+* @midhunbiju
 
 ## License
 
