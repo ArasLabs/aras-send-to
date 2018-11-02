@@ -18,7 +18,7 @@ Release | Notes
 
 Project | Aras
 --------|------
-[v9.3](https://github.com/ArasLabs/aras-send-to/releases/tag/v9.3) | 9.3, 11.0 SP9
+[v9.3](https://github.com/ArasLabs/aras-send-to/releases/tag/v9.3) | 9.3, 11.0 SP9, 11.0 SP11
 [v9.1](https://github.com/ArasLabs/aras-send-to/releases/tag/v9.1) | 8.1, 9.1
 [v8.1](https://github.com/ArasLabs/aras-send-to/releases/tag/v8.1) | 8.1
 
